@@ -11,7 +11,12 @@ interface IAuthContextData {
   isLoading: boolean;
   user: IUser | null;
   Login(email: string, password: string): Promise<void>;
-  updateUser(name: string, email: string, phone: string): Promise<void>;
+  updateUser(
+    name: string,
+    email: string,
+    phone: string,
+    avatar: string
+  ): Promise<void>;
   Logout(): void;
 }
 
@@ -110,12 +115,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const updateUser = async (name: string, email: string, phone: string) => {
+  const updateUser = async (
+    name: string,
+    email: string,
+    phone: string,
+    avatar: string
+  ) => {
     try {
       const data = {
         name: name === "" ? user?.name : name,
         email: email === "" ? user?.email : email,
         phone: phone === "" ? user?.phone : phone,
+        avatar: avatar === "" ? user?.avatar : avatar,
       };
 
       const response = await api.put(`users/${user?.id}`, data);

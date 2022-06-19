@@ -15,6 +15,7 @@ const Profile: NextPage = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
+  const [avatar, setAvatar] = useState<string>("");
 
   useEffect(() => {
     handleGetUserById();
@@ -76,6 +77,14 @@ const Profile: NextPage = () => {
             minLength={14}
             maxLength={15}
           />
+          <Text>Avatar</Text>
+          <Input
+            placeholder="Cole aqui seu avatar"
+            focusBorderColor={"blue.500"}
+            onChange={(e) => setAvatar(e.target.value)}
+            defaultValue={userProfile?.avatar}
+            maxLength={500}
+          />
           <Stack
             spacing={5}
             isInline
@@ -87,7 +96,7 @@ const Profile: NextPage = () => {
           </Stack>
           <Button
             colorScheme={"blue"}
-            onClick={() => updateUser(name, email, phone)}
+            onClick={() => updateUser(name, email, phone, avatar)}
             variant="solid"
             size="md"
           >

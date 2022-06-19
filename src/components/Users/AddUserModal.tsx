@@ -107,6 +107,8 @@ const AddUserModal = ({
               minLength={14}
               maxLength={15}
             />
+            <Text>Avatar</Text>
+            <Input name="avatar" onChange={handleInputChange} type="text" />
             <Text>Senha</Text>
             <Input
               name="password"

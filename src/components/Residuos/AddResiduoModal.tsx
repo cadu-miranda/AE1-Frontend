@@ -94,6 +94,13 @@ const AddResiduoModal = ({
               ref={initialRef}
               type="text"
             />
+            <Text>Endereço</Text>
+            <Input
+              name="address"
+              onChange={handleInputChange}
+              ref={initialRef}
+              type="text"
+            />
           </Stack>
         </ModalBody>
         <ModalFooter>
