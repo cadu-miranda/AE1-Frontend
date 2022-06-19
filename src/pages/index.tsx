@@ -45,7 +45,7 @@ const Main: NextPage = () => {
           <Image
             alt="Login Image"
             objectFit="cover"
-            src="/static/images/mind-wp.jpeg"
+            src="/static/images/papel.jpg"
           />
         </Flex>
         <Flex p={8} flex={1} align={"center"} justify={"center"}>

@@ -196,7 +196,7 @@ const ForgotPassword: NextPage = () => {
           <Image
             alt="Forgot password Image"
             objectFit="cover"
-            src="/static/images/mind-wp.jpeg"
+            src="/static/images/papel.jpg"
           />
         </Flex>
       </Stack>
