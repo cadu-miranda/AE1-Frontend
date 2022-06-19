@@ -10,6 +10,7 @@ import {
   useDisclosure,
   Button,
   useToast,
+  Text,
 } from "@chakra-ui/react";
 import { IResiduo } from "../../interfaces/IResiduo";
 import { FiTrash2 } from "react-icons/fi";
@@ -92,10 +93,11 @@ export const ResiduoCard = ({
           />
 
           <Box p={6}>
-            <Stack spacing={0} align={"center"} mb={5}>
+            <Stack spacing={4} align={"center"} mb={5}>
               <Heading fontSize={"2xl"} fontWeight={500} fontFamily={"body"}>
                 {residuoItem?.name}
               </Heading>
+              <Text>{residuoItem.address}</Text>
             </Stack>
 
             <Stack display={"flex"} justifyContent={"space-between"}>

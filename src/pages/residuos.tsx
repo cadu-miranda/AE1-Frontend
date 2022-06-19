@@ -41,7 +41,7 @@ const Residuos: NextPage = () => {
       console.log(e);
       toast({
         title: "Erro.",
-        description: "Erro ao receber lista de usuários!",
+        description: "Erro ao receber lista de resíduos!",
         status: "error",
         duration: 2500,
         isClosable: true,
